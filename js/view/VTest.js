@@ -19,13 +19,18 @@ define([
             $("#sqrt-button").click(function() {
                 try {
                     var app    = new App();
-                    var number = parseInt(document.getElementById("sqrt-number").value);
 
-                    var result = app.sqrt(number);
-                    if (!result.im) {
-                        alert("La raiz cuadrada de " + number + " es " + result);
-                    } else {
-                        alert("La raiz cuadrada de " + number + " es " + result.im + "i");
+                    var elem =  document.getElementById("sqrt-number").value;
+                    if(!elem){
+                        alert("Debe ingresar un numero");
+                    }else {
+                        var number = parseInt(elem);
+                        var result = app.sqrt(number);
+                        if (!result.im) {
+                            alert("La raiz cuadrada de " + number + " es " + result);
+                        } else {
+                            alert("La raiz cuadrada de " + number + " es " + result.im + "i");
+                        }
                     }
                 } catch (e) {
                     alert("Error: " + JSON.stringify(e));
@@ -40,6 +45,7 @@ define([
                     alert("Error: " + JSON.stringify(e));
                 }
             });
+
         }
 
     });
