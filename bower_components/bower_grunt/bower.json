@@ -1,0 +1,20 @@
+{
+  "name": "Demo_Bower_Grunt",
+  "version": "1.0.0",
+  "authors": [
+	 "Grupo 3"
+	],
+	"description": "Sample of Bower module",
+	"moduleType": [
+	  "amd"
+	],
+	"ignore": [
+	  "**/.*",
+	  "node_modules",
+	  "bower_components"
+	],
+	"devdependencies": {
+		"mathjs": "1.7.0"
+	},
+  "private": false
+}
